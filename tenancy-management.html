@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tenancy management · Keylee</title>
+
+<style>
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-600.woff') format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-500.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+</style>
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#51325C}a:hover{color:#3B2244}
+.k-wrap{max-width:1296px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.k-four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.k-split{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.k-foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.k-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.k-menu{display:none}
+.k-nav a{color:#FFFFFF;text-decoration:none;font-size:17px;font-weight:500}
+.k-nav a[aria-current]{text-decoration:underline;text-decoration-color:#A8AFB7;text-decoration-thickness:2px;text-underline-offset:8px}
+.k-label{display:block;font-size:13px;line-height:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#51325C}
+.k-meta{display:block;font-size:13px;line-height:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#5C5C5D}
+.k-h2{margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(32px,3.4vw,40px);line-height:1.2;color:#51325C}
+.k-h3{margin:0;font-size:22px;line-height:30px;font-weight:500;color:#51325C}
+.k-p{margin:10px 0 0;font-size:17px;line-height:28px;color:#161618}
+.k-panel{background:#F6F5F7;border-radius:56px 0 0 0;padding:36px 32px}
+.k-panel svg{display:block;margin-bottom:24px}
+.k-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;background:#51325C;color:#FFFFFF;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none}
+.k-btn-w{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;background:#FFFFFF;color:#51325C;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none}
+.k-tlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:17px;font-weight:500;color:#51325C;text-decoration:none}
+.k-flink{font-size:16px;line-height:26px;color:#161618;text-decoration:none}
+.k-checks{list-style:none;margin:0;padding:0}
+.k-checks li{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid #A8AFB7}
+.k-checks svg{flex-shrink:0;margin-top:2px}
+.k-step{border-top:1px solid #A8AFB7;padding-top:28px}
+.k-num{font-family:'Playfair Display',Georgia,serif;font-size:40px;line-height:48px;color:#51325C}
+.k-faq{display:flex;flex-direction:column;gap:12px}
+.k-faq details{background:#FFFFFF;border-radius:6px;padding:0 28px}
+.k-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-size:18px;line-height:26px;font-weight:500;color:#161618}
+.k-faq summary::-webkit-details-marker{display:none}
+.k-faq summary h3{margin:0;font:inherit}
+.k-faq details p{margin:0;padding:0 0 24px;font-size:17px;line-height:28px;color:#5C5C5D}
+.k-faq .k-chev{flex-shrink:0;transition:transform .2s ease}
+.k-faq details[open] .k-chev{transform:rotate(45deg)}
+.k-rel{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 32px;background:#F6F5F7;border-radius:48px 0 0 0;text-decoration:none}
+.k-input{height:52px;padding:0 16px;border:1px solid #A8AFB7;border-radius:6px;font:inherit;color:#161618;background:#FFFFFF;box-sizing:border-box;width:100%}
+.k-input:focus{outline:2px solid #51325C;outline-offset:1px}
+.k-flabel{font-size:15px;line-height:22px;font-weight:500}
+@media (max-width:1024px){
+.k-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-split{grid-template-columns:1fr;gap:40px}
+.k-foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-bgmark{opacity:.5}
+}
+@media (max-width:640px){
+.k-wrap{padding:0 16px}
+.k-four,.k-foot,.k-form{grid-template-columns:1fr}
+.k-links{display:none !important}
+.k-menu{display:inline-flex}
+}
+
+/* Markers, same as the homepage: menu underline (silver, slides in on hover, stays on the current page) and a short silver line under section headings. */
+nav[aria-label="Main"] a{position:relative;text-decoration:none !important}
+nav[aria-label="Main"] a::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:#A8AFB7;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+nav[aria-label="Main"] a:hover::after,nav[aria-label="Main"] a[aria-current]::after{transform:scaleX(1)}
+.k-h2::after,section h2[style*="Playfair"]::after{content:"";display:block;width:40px;height:2px;margin-top:20px;background:#A8AFB7}
+</style>
+
+</head>
+<body>
+
+
+<div style="font-family: 'Poppins', Arial, sans-serif; font-size: 17px; line-height: 28px; color: #161618; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+
+<section style="position: relative; overflow: hidden; background: #51325C; color: #FFFFFF; padding-bottom: 104px">
+  <img class="k-bgmark" src="logos/keylee-icon-tint.svg" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: 120px; height: 520px; width: auto">
+  <div class="k-wrap" style="position: relative">
+    <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0">
+      <a href="index.html" style="display: block; line-height: 0"><img src="logos/keylee-logo-reverse.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto"></a>
+      <nav aria-label="Main" class="k-links k-nav" style="display: flex; align-items: center; gap: 36px">
+        <a href="index.html">Home</a>
+        <a href="services.html" aria-current="page">Services</a>
+        <a href="guides.html">Guides</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="k-menu" aria-label="Open menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; background: transparent; border: 1px solid #A8AFB7; border-radius: 8px; color: #FFFFFF; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+    </header>
+    <nav aria-label="Breadcrumb" style="padding-top: 40px">
+      <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; line-height: 22px; color: #A8AFB7">
+        <li><a href="index.html" style="color: #A8AFB7; text-decoration: none">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="services.html" style="color: #A8AFB7; text-decoration: none">Services</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page" style="color: #FFFFFF">Tenancy management</li>
+      </ol>
+    </nav>
+    <div style="max-width: 820px; padding-top: 48px">
+      <div style="display: flex; align-items: center; gap: 16px">
+        <span aria-hidden="true" style="display: block; width: 40px; height: 3px; background: #7E9236"></span>
+        <span style="font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #A8AFB7">Services</span>
+      </div>
+      <h1 style="margin: 20px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 56px); line-height: 1.143">Tenancy management</h1>
+      <p style="margin: 16px 0 0; font-size: 22px; line-height: 30px; font-weight: 500">Ejari, renewals, rent collection.</p>
+      <p style="margin: 20px 0 0; font-size: 17px; line-height: 28px; max-width: 660px">We handle the tenancy for you in Dubai: contracts, Ejari, renewals, rent and move-outs. Every step dated, documented and on record.</p>
+      <a href="#enquiry" class="k-btn-w" style="margin-top: 32px">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: #FFFFFF; padding: 112px 0">
+  <div class="k-wrap">
+    <span class="k-label">When landlords call us</span>
+    <h2 class="k-h2">Situations we help with</h2>
+    <div class="k-four" style="margin-top: 48px">
+      <div class="k-panel">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path><path d="m9.5 15.5 2 2 3.5-4"></path></svg>
+        <h3 class="k-h3">Renewal is coming up</h3>
+        <p class="k-p">The date, the rent and the notice all need handling.</p>
+      </div>
+      <div class="k-panel">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M3 10h18M7 15h4"></path></svg>
+        <h3 class="k-h3">Rent and cheques to track</h3>
+        <p class="k-p">Post-dated cheques, deposits and receipts to keep straight.</p>
+      </div>
+      <div class="k-panel">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5"></path><path d="M10 16l4-4-4-4M14 12H4"></path></svg>
+        <h3 class="k-h3">A tenant is moving out</h3>
+        <p class="k-p">The inspection, the deposit and the handover to sort.</p>
+      </div>
+      <div class="k-panel">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 14h6M9 17h4"></path></svg>
+        <h3 class="k-h3">A new tenancy to set up</h3>
+        <p class="k-p">Contract, Ejari and move-in, done properly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #F6F5F7; padding: 112px 0">
+  <div class="k-wrap">
+    <div class="k-split">
+      <div>
+        <span class="k-label">What’s included</span>
+        <h2 class="k-h2">What we handle for you</h2>
+        <p class="k-p" style="margin-top: 20px">From the first contract to the final handover, every date tracked and every document filed.</p>
+        <div style="margin-top: 40px; background: #51325C; color: #FFFFFF; border-radius: 48px 0 0 0; padding: 32px">
+          <p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; line-height: 32px">Paperwork done and filed, every time.</p>
+        </div>
+      </div>
+      <ul class="k-checks">
+        <li><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg><span>The tenancy contract prepared and signed.</span></li>
+        <li><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg><span>Ejari registered at the start and renewed at each renewal.</span></li>
+        <li><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg><span>Rent collection, cheque deposits and a receipt for every payment.</span></li>
+        <li><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg><span>Renewal notices sent on time, and the rent checked against the RERA rental index.</span></li>
+        <li><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg><span>The move-out inspection and the deposit settled, with photos.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="background: #FFFFFF; padding: 112px 0">
+  <div class="k-wrap">
+    <span class="k-label">How it works</span>
+    <h2 class="k-h2">From the contract to the move-out</h2>
+    <ol class="k-four" style="list-style: none; margin: 48px 0 0; padding: 0">
+      <li class="k-step"><div class="k-num">01</div><h3 class="k-h3" style="margin-top: 20px">Send us the current contract</h3><p class="k-p">Or tell us about the new tenancy you need set up.</p></li>
+      <li class="k-step"><div class="k-num">02</div><h3 class="k-h3" style="margin-top: 20px">We map the dates</h3><p class="k-p">Renewal, notice, cheques and Ejari, all on one calendar.</p></li>
+      <li class="k-step"><div class="k-num">03</div><h3 class="k-h3" style="margin-top: 20px">We handle each stage</h3><p class="k-p">Notices, renewals, collections and the move-out.</p></li>
+      <li class="k-step"><div class="k-num">04</div><h3 class="k-h3" style="margin-top: 20px">You hear at each milestone</h3><p class="k-p">In writing, with the documents attached.</p></li>
+    </ol>
+    <div style="margin-top: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; background: #F6F5F7; border-radius: 64px 0 0 0; padding: 40px 48px">
+      <div style="max-width: 760px">
+        <h2 class="k-h3">What it costs</h2>
+        <p class="k-p">A fixed fee per tenancy, or included in property management. Quoted in writing before we start.</p>
+      </div>
+      <a href="#enquiry" class="k-btn">Get a quote</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: #F6F5F7; padding: 112px 0">
+  <div class="k-wrap">
+    <div class="k-split">
+      <div>
+        <span class="k-label">Questions</span>
+        <h2 class="k-h2">What landlords ask about tenancy management</h2>
+      </div>
+      <div class="k-faq">
+        <details open><summary><h3>Can you handle just the renewal?</h3><svg class="k-chev" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Yes. We can handle a single renewal, or the whole tenancy from start to finish. [Confirm.]</p></details>
+        <details><summary><h3>Do you register the Ejari?</h3><svg class="k-chev" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Yes. We register it for a new tenancy and renew it at each renewal.</p></details>
+        <details><summary><h3>How do you set the renewal rent?</h3><svg class="k-chev" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary><p>We check it against the RERA rental index and tell you what’s possible before any notice goes out.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #FFFFFF; padding: 112px 0">
+  <div class="k-wrap">
+    <div class="k-split">
+      <div>
+        <span class="k-label">Related guides</span>
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 32px">
+          <article><span class="k-meta">[X] min read</span><h3 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">Renewing a tenancy in Dubai, step by step</a></h3><p class="k-p" style="margin-top: 8px">Contracts, Ejari and rent at renewal, in the order they happen.</p></article>
+          <article><span class="k-meta">[X] min read</span><h3 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">Can I raise the rent? Reading the rental index</a></h3><p class="k-p" style="margin-top: 8px">How the RERA rental index works, and what it means at your next renewal.</p></article>
+        </div>
+      </div>
+      <div>
+        <span class="k-label">Related services</span>
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px">
+          <a href="property-management.html" class="k-rel"><span style="display: flex; flex-direction: column"><span class="k-h3">Property management</span><span class="k-p" style="margin-top: 4px">For landlords who don’t want to be called.</span></span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="rdc-assistance.html" class="k-rel"><span style="display: flex; flex-direction: column"><span class="k-h3">RDC assistance</span><span class="k-p" style="margin-top: 4px">Your tenant isn’t paying, or won’t leave.</span></span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enquiry" style="background: #51325C; color: #FFFFFF; padding: 112px 0">
+  <div class="k-wrap">
+    <div class="k-split">
+      <div>
+        <span class="k-label" style="color: #A8AFB7">Talk to us</span>
+        <h2 class="k-h2" style="color: #FFFFFF">Tell us what’s happening.</h2>
+        <p class="k-p" style="margin-top: 20px; color: #FFFFFF">One person reads it and replies. No obligation, and nothing starts without your go-ahead.</p>
+      </div>
+      <form style="background: #FFFFFF; color: #161618; border-radius: 64px 0 0 0; padding: 48px">
+        <div class="k-form">
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="f-name" class="k-flabel">Name</label><input class="k-input" id="f-name" type="text" autocomplete="name"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="f-phone" class="k-flabel">Phone or WhatsApp</label><input class="k-input" id="f-phone" type="tel" autocomplete="tel" placeholder="+971 5X XXX XXXX"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="f-email" class="k-flabel">Email</label><input class="k-input" id="f-email" type="email" autocomplete="email"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="f-service" class="k-flabel">Service</label>
+            <select class="k-input" id="f-service" style="padding: 0 12px"><option>Property management</option><option selected>Tenancy management</option><option>Maintenance and fit-out</option><option>Snagging and handover</option><option>POA services</option><option>Property gifting</option><option>Sell your property</option><option>RDC assistance</option><option>Not sure yet</option></select>
+          </div>
+          <fieldset style="grid-column: 1 / -1; margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px">
+            <legend class="k-flabel" style="padding: 0; margin-bottom: 10px">I’m a</legend>
+            <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer"><input type="radio" name="f-role" value="landlord" checked style="width: 20px; height: 20px; margin: 0; accent-color: #51325C"> Landlord</label>
+            <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer"><input type="radio" name="f-role" value="tenant" style="width: 20px; height: 20px; margin: 0; accent-color: #51325C"> Tenant</label>
+          </fieldset>
+          <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px"><label for="f-msg" class="k-flabel">What’s happening?</label><textarea class="k-input" id="f-msg" rows="5" style="height: auto; padding: 14px 16px; resize: vertical"></textarea></div>
+        </div>
+        <div style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+          <p style="margin: 0; font-size: 14px; line-height: 22px; color: #5C5C5D">We use your details only to reply. <a href="privacy-and-terms.html" style="color: #51325C">Privacy and terms</a></p>
+          <button type="submit" class="k-btn" style="border: 0; font: inherit; font-weight: 500; cursor: pointer; padding: 0 36px">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer style="background: #FFFFFF; padding: 88px 0 40px">
+  <div class="k-wrap">
+    <div class="k-foot">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+        <a href="index.html" style="display: block; line-height: 0"><img src="logos/keylee-logo-colour.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto"></a>
+        <p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 28px">Keylee is a Dubai property management company. Properties managed properly.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="#" class="k-tlink" style="min-height: 0">LinkedIn</a><a href="#" class="k-tlink" style="min-height: 0">WhatsApp</a></div>
+      </div>
+      <nav aria-label="Pages" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Pages</h3>
+        <a href="index.html" class="k-flink">Home</a><a href="services.html" class="k-flink">Services</a><a href="guides.html" class="k-flink">Guides</a><a href="faq.html" class="k-flink">FAQ</a><a href="about.html" class="k-flink">About</a><a href="contact.html" class="k-flink">Contact</a><a href="rdc-assistance-for-tenants.html" class="k-flink">For tenants</a>
+      </nav>
+      <nav aria-label="Services" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Services</h3>
+        <a href="property-management.html" class="k-flink">Property management</a><a href="tenancy-management.html" class="k-flink" aria-current="page" style="color: #51325C; font-weight: 500">Tenancy management</a><a href="maintenance-and-fit-out.html" class="k-flink">Maintenance and fit-out</a><a href="snagging-and-handover.html" class="k-flink">Snagging and handover</a><a href="poa-services.html" class="k-flink">POA services</a><a href="property-gifting.html" class="k-flink">Property gifting</a><a href="sell-your-property.html" class="k-flink">Sell your property</a><a href="rdc-assistance.html" class="k-flink">RDC assistance</a>
+      </nav>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Contact</h3>
+        <a href="mailto:info@keylee.ae" class="k-flink">info@keylee.ae</a><a href="#" class="k-flink">[+971 4 XXX XXXX]</a><span class="k-flink">Dubai, United Arab Emirates</span>
+      </div>
+    </div>
+    <div style="margin-top: 72px; padding-top: 28px; border-top: 1px solid #A8AFB7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; line-height: 22px; color: #5C5C5D">
+      <span>© 2026 Keylee. All rights reserved. <a href="privacy-and-terms.html" style="color: #5C5C5D">Privacy and terms</a></span>
+      <span>Properties managed properly.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>

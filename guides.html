@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guides · Keylee</title>
+
+<style>
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-600.woff') format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-500.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+</style>
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#51325C}a:hover{color:#3B2244}
+.k-wrap{max-width:1296px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.k-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.k-foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.k-menu{display:none}
+.k-nav a{color:#FFFFFF;text-decoration:none;font-size:17px;font-weight:500}
+.k-nav a[aria-current]{text-decoration:underline;text-decoration-color:#A8AFB7;text-decoration-thickness:2px;text-underline-offset:8px}
+.k-label{display:block;font-size:13px;line-height:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#51325C}
+.k-meta{display:block;font-size:13px;line-height:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#5C5C5D}
+.k-h2{margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(32px,3.4vw,40px);line-height:1.2;color:#51325C}
+.k-h3{margin:0;font-size:22px;line-height:30px;font-weight:500;color:#51325C}
+.k-p{margin:10px 0 0;font-size:17px;line-height:28px;color:#161618}
+.k-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;background:#51325C;color:#FFFFFF;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none}
+.k-btn-w{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;background:#FFFFFF;color:#51325C;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none}
+.k-tlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:17px;font-weight:500;color:#51325C;text-decoration:none}
+.k-flink{font-size:16px;line-height:26px;color:#161618;text-decoration:none}
+.k-chip{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:1px solid #A8AFB7;border-radius:999px;font-size:15px;font-weight:500;color:#51325C;text-decoration:none;background:#FFFFFF}
+.k-chip[aria-current]{background:#51325C;border-color:#51325C;color:#FFFFFF}
+.k-img{aspect-ratio:16/10;border-radius:80px 0 0 0;background:#EEEBEF;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;text-align:center;font-size:14px;line-height:22px;color:#5C5C5D}
+.k-page{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;border-radius:999px;font-size:16px;font-weight:500;color:#51325C;text-decoration:none}
+.k-page[aria-current]{background:#51325C;color:#FFFFFF}
+@media (max-width:1024px){
+.k-three{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-bgmark{opacity:.5}
+}
+@media (max-width:640px){
+.k-wrap{padding:0 16px}
+.k-three,.k-foot{grid-template-columns:1fr}
+.k-links{display:none !important}
+.k-menu{display:inline-flex}
+}
+
+/* Markers, same as the homepage: menu underline (silver, slides in on hover, stays on the current page) and a short silver line under section headings. */
+nav[aria-label="Main"] a{position:relative;text-decoration:none !important}
+nav[aria-label="Main"] a::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:#A8AFB7;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+nav[aria-label="Main"] a:hover::after,nav[aria-label="Main"] a[aria-current]::after{transform:scaleX(1)}
+.k-h2::after,section h2[style*="Playfair"]::after{content:"";display:block;width:40px;height:2px;margin-top:20px;background:#A8AFB7}
+</style>
+
+</head>
+<body>
+
+
+<div style="font-family: 'Poppins', Arial, sans-serif; font-size: 17px; line-height: 28px; color: #161618; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+
+<section style="position: relative; overflow: hidden; background: #51325C; color: #FFFFFF; padding-bottom: 88px">
+  <img class="k-bgmark" src="logos/keylee-icon-tint.svg" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: 110px; height: 400px; width: auto">
+  <div class="k-wrap" style="position: relative">
+    <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0">
+      <a href="index.html" style="display: block; line-height: 0"><img src="logos/keylee-logo-reverse.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto"></a>
+      <nav aria-label="Main" class="k-links k-nav" style="display: flex; align-items: center; gap: 36px">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="guides.html" aria-current="page">Guides</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="k-menu" aria-label="Open menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; background: transparent; border: 1px solid #A8AFB7; border-radius: 8px; color: #FFFFFF; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+    </header>
+    <nav aria-label="Breadcrumb" style="padding-top: 40px">
+      <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; line-height: 22px; color: #A8AFB7">
+        <li><a href="index.html" style="color: #A8AFB7; text-decoration: none">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page" style="color: #FFFFFF">Guides</li>
+      </ol>
+    </nav>
+    <div style="max-width: 820px; padding-top: 48px">
+      <div style="display: flex; align-items: center; gap: 16px">
+        <span aria-hidden="true" style="display: block; width: 40px; height: 3px; background: #7E9236"></span>
+        <span style="font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #A8AFB7">Free guides</span>
+      </div>
+      <h1 style="margin: 20px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 56px); line-height: 1.143">Guides for Dubai landlords</h1>
+      <p style="margin: 20px 0 0; font-size: 17px; line-height: 28px; max-width: 660px">Practical how-tos, written for landlords and kept up to date, so you can find the answer when a unit, a tenant or a form needs your attention.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES: real links, each category is its own URL -->
+<section style="background: #FFFFFF; padding: 56px 0 0">
+  <div class="k-wrap">
+    <nav aria-label="Guide categories" style="display: flex; flex-wrap: wrap; gap: 12px">
+      <a href="guides.html" class="k-chip" aria-current="page">All guides</a>
+      <a href="#" class="k-chip">Tenancy</a>
+      <a href="#" class="k-chip">Maintenance</a>
+      <a href="#" class="k-chip">Snagging and handover</a>
+      <a href="#" class="k-chip">Disputes and the RDC</a>
+      <a href="#" class="k-chip">Selling</a>
+      <a href="#" class="k-chip">POA and gifting</a>
+      <a href="#" class="k-chip">Market</a>
+    </nav>
+  </div>
+</section>
+
+<!-- GUIDE LIST: reads from the Guides CMS type, newest first, 9 per page -->
+<section style="background: #FFFFFF; padding: 48px 0 112px">
+  <div class="k-wrap">
+    <div class="k-three" style="row-gap: 56px">
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Hands at work: a snagging checklist at handover]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Snagging and handover · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="guide-article-template.html" style="color: #51325C; text-decoration: none">What to check before you accept a new unit</a></h2>
+        <p class="k-p">The defects to look for at handover, and what to do if you find them.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Hands at work: a folder of tenancy records]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Disputes and the RDC · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">How a Rental Disputes Center case works</a></h2>
+        <p class="k-p">The steps from a missed payment to a filed case, and the records you need.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Hands at work: keys passed over a tenancy contract]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Tenancy · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">Renewing a tenancy in Dubai, step by step</a></h2>
+        <p class="k-p">Contracts, Ejari and rent at renewal, in the order they happen.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Dubai at eye level: a residential street]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Market · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">Can I raise the rent? Reading the rental index</a></h2>
+        <p class="k-p">How the RERA rental index works, and what it means at your next renewal.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Real homes, lived in: an empty, clean living room]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Market · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">What an empty month really costs</a></h2>
+        <p class="k-p">Service charges, lost rent and the cost of a slow re-let, added up.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Hands at work: a tap being fixed]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Maintenance · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">What happens when a tenant reports a leak</a></h2>
+        <p class="k-p">From the first message to the repair and the invoice, step by step.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Hands at work: a contractor on site]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Maintenance · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">How we choose contractors</a></h2>
+        <p class="k-p">What we check before a contractor works on your property.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Hands at work: documents and a pen]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">POA and gifting · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">Gifting a Dubai property to family</a></h2>
+        <p class="k-p">Who you can transfer to, the documents and the DLD steps.</p>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img">[Photo · Real homes, lived in: a bright apartment, natural light]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Selling · [X] min read</span>
+        <h2 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">Selling a unit with a tenant in place</a></h2>
+        <p class="k-p">Viewings, notice and handover when the unit is still rented.</p>
+      </article>
+    </div>
+
+    <nav aria-label="Pagination" style="margin-top: 72px; padding-top: 28px; border-top: 1px solid #A8AFB7; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <span style="font-size: 15px; color: #5C5C5D">Page 1 of [X]</span>
+      <div style="display: flex; align-items: center; gap: 4px">
+        <a href="guides.html" class="k-page" aria-current="page">1</a>
+        <a href="#" class="k-page">2</a>
+        <a href="#" class="k-page">3</a>
+        <a href="#" class="k-tlink" style="margin-left: 12px">Next page <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section style="background: #51325C; color: #FFFFFF; padding: 96px 0">
+  <div class="k-wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
+    <div style="max-width: 720px">
+      <span class="k-label" style="color: #A8AFB7">Can’t find the answer?</span>
+      <h2 class="k-h2" style="color: #FFFFFF">Ask us directly. One person replies.</h2>
+    </div>
+    <a href="contact.html" class="k-btn-w">Talk to us</a>
+  </div>
+</section>
+
+<footer style="background: #FFFFFF; padding: 88px 0 40px">
+  <div class="k-wrap">
+    <div class="k-foot">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+        <a href="index.html" style="display: block; line-height: 0"><img src="logos/keylee-logo-colour.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto"></a>
+        <p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 28px">Keylee is a Dubai property management company. Properties managed properly.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="#" class="k-tlink" style="min-height: 0">LinkedIn</a><a href="#" class="k-tlink" style="min-height: 0">WhatsApp</a></div>
+      </div>
+      <nav aria-label="Pages" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Pages</h3>
+        <a href="index.html" class="k-flink">Home</a><a href="services.html" class="k-flink">Services</a><a href="guides.html" class="k-flink">Guides</a><a href="faq.html" class="k-flink">FAQ</a><a href="about.html" class="k-flink">About</a><a href="contact.html" class="k-flink">Contact</a><a href="rdc-assistance-for-tenants.html" class="k-flink">For tenants</a>
+      </nav>
+      <nav aria-label="Services" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Services</h3>
+        <a href="property-management.html" class="k-flink">Property management</a><a href="tenancy-management.html" class="k-flink">Tenancy management</a><a href="maintenance-and-fit-out.html" class="k-flink">Maintenance and fit-out</a><a href="snagging-and-handover.html" class="k-flink">Snagging and handover</a><a href="poa-services.html" class="k-flink">POA services</a><a href="property-gifting.html" class="k-flink">Property gifting</a><a href="sell-your-property.html" class="k-flink">Sell your property</a><a href="rdc-assistance.html" class="k-flink">RDC assistance</a>
+      </nav>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Contact</h3>
+        <a href="mailto:info@keylee.ae" class="k-flink">info@keylee.ae</a><a href="#" class="k-flink">[+971 4 XXX XXXX]</a><span class="k-flink">Dubai, United Arab Emirates</span>
+      </div>
+    </div>
+    <div style="margin-top: 72px; padding-top: 28px; border-top: 1px solid #A8AFB7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; line-height: 22px; color: #5C5C5D">
+      <span>© 2026 Keylee. All rights reserved. <a href="privacy-and-terms.html" style="color: #5C5C5D">Privacy and terms</a></span>
+      <span>Properties managed properly.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keylee homepage</title>
+
+<style>
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-600.woff') format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-500.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+</style>
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#51325C}a:hover{color:#3B2244}
+.k-wrap{max-width:1296px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.k-svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.k-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.k-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.k-four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.k-split{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.k-foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.k-menu{display:none}
+.k-card{transition:box-shadow .2s ease, transform .2s ease}
+.k-card:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(22,22,24,.08),0 16px 32px rgba(22,22,24,.12)}
+/* MARKER 1: menu underline. Silver, slides in on hover, stays on the current page. */
+nav[aria-label="Main"] a{position:relative}
+nav[aria-label="Main"] a::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:#A8AFB7;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+nav[aria-label="Main"] a:hover::after,nav[aria-label="Main"] a[aria-current]::after{transform:scaleX(1)}
+/* MARKER 2: short silver rule under every section heading. Green stays in the hero only. */
+section h2[style*="Playfair"]::after{content:"";display:block;width:40px;height:2px;margin-top:20px;background:#A8AFB7}
+@media (max-width:1024px){
+.k-svc,.k-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-three{grid-template-columns:1fr}
+.k-split{grid-template-columns:1fr;gap:40px}
+.k-foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-bgmark{opacity:.5}
+}
+@media (max-width:640px){
+.k-wrap{padding:0 16px}
+.k-svc{gap:12px}
+.k-two,.k-four,.k-foot{grid-template-columns:1fr}
+.k-links{display:none !important}
+.k-menu{display:inline-flex}
+.k-cardpad{padding:16px !important}
+}
+</style>
+
+</head>
+<body>
+
+
+<div style="font-family: 'Poppins', Arial, sans-serif; font-size: 17px; line-height: 28px; color: #161618; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+
+<!-- HERO: brand book page 43. Full-bleed Keylee Purple, service cards overlap its bottom edge. -->
+<section style="position: relative; overflow: hidden; background: #51325C; color: #FFFFFF; padding-bottom: 176px">
+  <img class="k-bgmark" src="logos/keylee-icon-tint.svg" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: 96px; height: 600px; width: auto">
+
+
+  <div class="k-wrap" style="position: relative">
+    <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0">
+      <a href="index.html" style="display: block; line-height: 0">
+        <img src="logos/keylee-logo-reverse.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto">
+      </a>
+      <nav aria-label="Main" class="k-links" style="display: flex; align-items: center; gap: 36px">
+        <a href="index.html" aria-current="page" style="color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 500">Home</a>
+        <a href="services.html" style="color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 500">Services</a>
+        <a href="guides.html" style="color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 500">Guides</a>
+        <a href="about.html" style="color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 500">About</a>
+        <a href="contact.html" style="color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 500">Contact</a>
+      </nav>
+      <button class="k-menu" aria-label="Open menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; background: transparent; border: 1px solid #A8AFB7; border-radius: 8px; color: #FFFFFF; cursor: pointer">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </header>
+
+    <div style="max-width: 940px; padding-top: 72px">
+      <div style="display: flex; align-items: center; gap: 16px">
+        <span aria-hidden="true" style="display: block; width: 40px; height: 3px; background: #7E9236"></span>
+        <h1 style="margin: 0; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #A8AFB7">Property management in Dubai</h1>
+      </div>
+      <p style="margin: 24px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 56px); line-height: 1.143">Tell us what’s happening. We take it from here.</p>
+      <p style="margin: 20px 0 0; font-size: 17px; line-height: 28px; color: #FFFFFF; max-width: 720px">For landlords in Dubai, and for owners looking after a Dubai property from abroad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE CARDS: page 43. Same names, same order as the brand book service list. -->
+<section aria-label="What do you need help with" style="position: relative; margin-top: -112px">
+  <div class="k-wrap">
+    <div class="k-svc">
+      <a href="property-management.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20H15v-5.5H9V20H4z"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">I want someone to manage it all</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">Property management</span>
+      </a>
+      <a href="tenancy-management.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2-1.6-4.7-2-8-2v13c3.3 0 6 .4 8 2 2-1.6 4.7-2 8-2V5c-3.3 0-6 .4-8 2z"></path><path d="M12 7v13"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">My tenant is renewing or moving out</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">Tenancy management</span>
+      </a>
+      <a href="maintenance-and-fit-out.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">Something’s broken in the unit</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">Maintenance and fit-out</span>
+      </a>
+      <a href="snagging-and-handover.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="6.5" r="3.5"></circle><path d="M11 10l1.5 10.5 2-1-.6-2.2 1.8-.8-.6-2"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">I’m collecting a new unit</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">Snagging and handover</span>
+      </a>
+      <a href="poa-services.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.1 1.5 2.6-.1.8 2.5 2.1 1.5-.8 2.5.8 2.5-2.1 1.5-.8 2.5-2.6-.1L12 19l-2.1-1.5-2.6.1-.8-2.5-2.1-1.5.8-2.5-.8-2.5 2.1-1.5.8-2.5 2.6.1z"></path><path d="m9 11.5 2 2 4-4"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">I can’t be in Dubai to sign</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">POA services</span>
+      </a>
+      <a href="property-gifting.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">I want to pass a property to family</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">Property gifting</span>
+      </a>
+      <a href="sell-your-property.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><rect x="5" y="12" width="3" height="5" rx="1"></rect><rect x="10.5" y="8" width="3" height="9" rx="1"></rect><rect x="16" y="4" width="3" height="13" rx="1"></rect></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">I’m ready to sell</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">Sell your property</span>
+      </a>
+      <a href="rdc-assistance.html" class="k-card k-cardpad" style="display: flex; flex-direction: column; gap: 8px; min-height: 160px; box-sizing: border-box; padding: 26px; background: #FFFFFF; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 2px rgba(22,22,24,.06), 0 10px 28px rgba(22,22,24,.09)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 0 0-6.9 12L4 20l4-1.1A8 8 0 1 0 12 4z"></path><path d="M8.5 12.5c.8-1 1.5-1 2.2 0s1.5 1 2.3 0 1.5-1 2.3 0"></path></svg>
+        <span style="margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 26px; color: #161618">My tenant isn’t paying</span>
+        <span style="margin-top: auto; font-size: 17px; line-height: 26px; color: #51325C">RDC assistance</span>
+      </a>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding: 36px 0 104px">
+      <p style="margin: 0; font-size: 17px; line-height: 28px; color: #5C5C5D"><span style="color: #51325C; font-weight: 500">One point of contact.</span> Everything on record. Leasing and sales through our partner brokers.</p>
+      <a href="contact.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; background: #51325C; color: #FFFFFF; border-radius: 999px; font-size: 17px; font-weight: 500; text-decoration: none">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH: brand book page 13 -->
+<section style="background: #F6F5F7; padding: 112px 0">
+  <div class="k-wrap">
+    <div class="k-split" style="align-items: end">
+      <div>
+        <span style="display: block; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Who we work with</span>
+        <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 40px); line-height: 1.2; color: #51325C">Two kinds of landlord, one standard</h2>
+      </div>
+      <p style="margin: 0; font-size: 17px; line-height: 28px; color: #161618">Whether you live abroad or down the road, you get the same standard: one person to call, quotes before work, and a report you can read in a minute.</p>
+    </div>
+
+    <div class="k-two" style="margin-top: 56px">
+      <article style="display: flex; flex-direction: column; gap: 28px">
+        <div role="img" aria-label="Photo placeholder" style="height: 320px; border-radius: 96px 0 0 0; background: #EEEBEF; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font-size: 14px; line-height: 22px; color: #5C5C5D">[Photo · Dubai at eye level: a building entrance or lobby, natural light]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">1200 × 640 px · WebP</span></div>
+        <div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">The overseas investor</h3>
+          <p style="margin: 12px 0 0; font-size: 17px; line-height: 28px; color: #161618">You live abroad and own one or more units in Dubai. We keep eyes on the property, collect the rent and solve problems remotely, from a tenant moving out to a cheque that bounces. Manage your Dubai property from anywhere.</p>
+        </div>
+      </article>
+      <article style="display: flex; flex-direction: column; gap: 28px">
+        <div role="img" aria-label="Photo placeholder" style="height: 320px; border-radius: 96px 0 0 0; background: #EEEBEF; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font-size: 14px; line-height: 22px; color: #5C5C5D">[Photo · Real homes, lived in: a tidy Dubai apartment, not staged]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">1200 × 640 px · WebP</span></div>
+        <div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">The busy local owner</h3>
+          <p style="margin: 12px 0 0; font-size: 17px; line-height: 28px; color: #161618">You live in the UAE, work full time and own a unit or two. We do the paperwork and chase the contractors, from the handover of a new unit to renewal season. We handle it. You hear from us when it’s done.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROMISE: messaging house, brand book page 16 -->
+<section style="background: #FFFFFF; padding: 112px 0">
+  <div class="k-wrap">
+    <div style="max-width: 760px">
+      <span style="display: block; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Our promise</span>
+      <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 40px); line-height: 1.2; color: #51325C">Everything after the keys change hands.</h2>
+      <p style="margin: 20px 0 0; font-size: 17px; line-height: 28px; color: #161618">Agencies close the deal. Keylee looks after the property, the tenancy and the owner from then on.</p>
+    </div>
+
+    <div class="k-four" style="margin-top: 64px">
+      <div style="border-top: 1px solid #A8AFB7; padding-top: 28px">
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 48px; color: #51325C">01</div>
+        <h3 style="margin: 20px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Handled</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">One point of contact who takes it from here. Tenancy, maintenance, snagging, POA and paperwork all in one place.</p>
+      </div>
+      <div style="border-top: 1px solid #A8AFB7; padding-top: 28px">
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 48px; color: #51325C">02</div>
+        <h3 style="margin: 20px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">On record</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">Every inspection, payment and repair, documented. You see it all in your owner portal, with photos, invoices and receipts.</p>
+      </div>
+      <div style="border-top: 1px solid #A8AFB7; padding-top: 28px">
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 48px; color: #51325C">03</div>
+        <h3 style="margin: 20px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">In plain sight</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">No surprises on cost or status. Quotes come before work starts and fees are agreed upfront.</p>
+      </div>
+      <div style="border-top: 1px solid #A8AFB7; padding-top: 28px">
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 48px; color: #51325C">04</div>
+        <h3 style="margin: 20px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Fair at every door</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">Fair to landlords, tenants and partners. RDC assistance built on records, not opinions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background: #F6F5F7; padding: 112px 0">
+  <div class="k-wrap">
+    <div style="max-width: 760px">
+      <span style="display: block; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">How it works</span>
+      <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 40px); line-height: 1.2; color: #51325C">What happens after you get in touch</h2>
+      <p style="margin: 20px 0 0; font-size: 17px; line-height: 28px; color: #161618">Handing over a property should not feel like a risk. Here is what happens, in order, from your first message to your first owner report.</p>
+    </div>
+
+    <ol class="k-three" style="list-style: none; margin: 56px 0 0; padding: 0">
+      <li style="background: #FFFFFF; border-radius: 64px 0 0 0; padding: 40px">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 0 0-6.9 12L4 20l4-1.1A8 8 0 1 0 12 4z"></path><path d="M8.5 12.5c.8-1 1.5-1 2.2 0s1.5 1 2.3 0 1.5-1 2.3 0"></path></svg>
+        <span style="display: block; margin-top: 24px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #5C5C5D">Step 1</span>
+        <h3 style="margin: 6px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Tell us what’s happening</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">Message us about the unit and what you need. One person picks it up and stays with you.</p>
+      </li>
+      <li style="background: #FFFFFF; border-radius: 64px 0 0 0; padding: 40px">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"></path></svg>
+        <span style="display: block; margin-top: 24px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #5C5C5D">Step 2</span>
+        <h3 style="margin: 6px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">We take it from here</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">We handle the tenant, the contractor and the paperwork. Quotes come before any work starts.</p>
+      </li>
+      <li style="background: #FFFFFF; border-radius: 64px 0 0 0; padding: 40px">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="m9 14 2 2 4-4"></path></svg>
+        <span style="display: block; margin-top: 24px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #5C5C5D">Step 3</span>
+        <h3 style="margin: 6px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">You get the report</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">Rent received, repairs done and what needs your decision. Photos, invoices and receipts attached.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- PARTNER BROKERS: how Keylee works, brand book page 8 -->
+<section style="background: #FFFFFF; padding: 112px 0">
+  <div class="k-wrap">
+    <div class="k-split" style="align-items: end">
+      <div>
+        <span style="display: block; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Partner brokers</span>
+        <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 40px); line-height: 1.2; color: #51325C">Leasing and sales go through partner brokers</h2>
+      </div>
+      <p style="margin: 0; font-size: 17px; line-height: 28px; color: #161618">Keylee manages the property and the tenancy, and briefs the broker. The broker runs viewings, listings and the deal. We keep looking after the unit throughout.</p>
+    </div>
+
+    <div class="k-four" style="margin-top: 56px">
+      <div style="background: #F6F5F7; border-radius: 56px 0 0 0; padding: 36px 32px">
+        <h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Landlord</h3>
+        <p style="margin: 12px 0 0; font-size: 17px; line-height: 28px; color: #161618">Owns the unit and pays Keylee a management fee for looking after the property.</p>
+      </div>
+      <div style="background: #51325C; border-radius: 56px 0 0 0; padding: 36px 32px">
+        <h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #FFFFFF">Keylee</h3>
+        <p style="margin: 12px 0 0; font-size: 17px; line-height: 28px; color: #FFFFFF">Manages the property and the tenancy, and briefs partner brokers on each unit.</p>
+      </div>
+      <div style="background: #F6F5F7; border-radius: 56px 0 0 0; padding: 36px 32px">
+        <h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Partner broker</h3>
+        <p style="margin: 12px 0 0; font-size: 17px; line-height: 28px; color: #161618">Runs viewings, listings and the deal, and leases or sells the unit for you.</p>
+      </div>
+      <div style="background: #F6F5F7; border-radius: 56px 0 0 0; padding: 36px 32px">
+        <h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Tenant or buyer</h3>
+        <p style="margin: 12px 0 0; font-size: 17px; line-height: 28px; color: #161618">Pays the broker’s commission once the unit is leased or sold through the broker.</p>
+      </div>
+    </div>
+
+    <a href="contact.html" style="margin-top: 48px; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; background: #51325C; color: #FFFFFF; border-radius: 999px; font-size: 17px; font-weight: 500; text-decoration: none">Talk to us</a>
+  </div>
+</section>
+
+<!-- GUIDES: content pillar, brand book page 46 -->
+<section style="background: #F6F5F7; padding: 112px 0">
+  <div class="k-wrap">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+      <div style="max-width: 760px">
+        <span style="display: block; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Free guides</span>
+        <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 40px); line-height: 1.2; color: #51325C">Guides for landlords</h2>
+        <p style="margin: 20px 0 0; font-size: 17px; line-height: 28px; color: #161618">Practical how-tos, written for landlords and kept up to date, so you can find the answer when a unit, a tenant or a form needs your attention.</p>
+      </div>
+      <a href="guides.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 17px; font-weight: 500; color: #51325C; text-decoration: none">All guides
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+
+    <div class="k-three" style="margin-top: 56px">
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" style="aspect-ratio: 16 / 10; border-radius: 80px 0 0 0; background: #EEEBEF; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font-size: 14px; line-height: 22px; color: #5C5C5D">[Photo · Hands at work: a snagging checklist at handover]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span style="display: block; margin-top: 24px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #5C5C5D">10 min read</span>
+        <h3 style="margin: 8px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">What to check before you accept a new unit</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">The defects to look for at handover, and what to do if you find them.</p>
+        <a href="#" style="margin-top: 16px; font-size: 17px; font-weight: 500; color: #51325C; text-decoration: none">Read the guide →</a>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" style="aspect-ratio: 16 / 10; border-radius: 80px 0 0 0; background: #EEEBEF; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font-size: 14px; line-height: 22px; color: #5C5C5D">[Photo · Hands at work: a folder of tenancy records]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span style="display: block; margin-top: 24px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #5C5C5D">10 min read</span>
+        <h3 style="margin: 8px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">How a Rental Disputes Center case works</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">The steps from a missed payment to a filed case, and the records you need.</p>
+        <a href="#" style="margin-top: 16px; font-size: 17px; font-weight: 500; color: #51325C; text-decoration: none">Read the guide →</a>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" style="aspect-ratio: 16 / 10; border-radius: 80px 0 0 0; background: #EEEBEF; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font-size: 14px; line-height: 22px; color: #5C5C5D">[Photo · Hands at work: keys passed over a tenancy contract]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span style="display: block; margin-top: 24px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #5C5C5D">10 min read</span>
+        <h3 style="margin: 8px 0 0; font-size: 22px; line-height: 30px; font-weight: 500; color: #51325C">Renewing a tenancy in Dubai, step by step</h3>
+        <p style="margin: 10px 0 0; font-size: 17px; line-height: 28px; color: #161618">Contracts, Ejari and rent at renewal, in the order they happen.</p>
+        <a href="#" style="margin-top: 16px; font-size: 17px; font-weight: 500; color: #51325C; text-decoration: none">Read the guide →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA: full-bleed Keylee Purple -->
+<section style="background: #51325C; color: #FFFFFF; padding: 120px 0">
+  <div class="k-wrap">
+    <div style="max-width: 800px">
+      <span style="display: block; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #A8AFB7">Talk to us</span>
+      <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4vw, 56px); line-height: 1.143; color: #FFFFFF">Hand it over, and hear from us when it’s done, on record.</h2>
+      <p style="margin: 24px 0 0; font-size: 17px; line-height: 28px; color: #FFFFFF; max-width: 660px">Tell us about your unit, the area and what you need. One person will reply, and we take it from there, with every step on record and no surprises on cost or status.</p>
+      <a href="contact.html" style="margin-top: 36px; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 32px; background: #FFFFFF; color: #51325C; border-radius: 999px; font-size: 17px; font-weight: 500; text-decoration: none">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #FFFFFF; padding: 88px 0 40px">
+  <div class="k-wrap">
+    <div class="k-foot">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+        <a href="index.html" style="display: block; line-height: 0">
+          <img src="logos/keylee-logo-colour.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto">
+        </a>
+        <p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 28px; color: #161618">Keylee is a Dubai property management company. Properties managed properly.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+          <a href="#" style="font-size: 17px; font-weight: 500; color: #51325C; text-decoration: none">LinkedIn</a>
+          <a href="#" style="font-size: 17px; font-weight: 500; color: #51325C; text-decoration: none">WhatsApp</a>
+        </div>
+      </div>
+      <nav aria-label="Pages" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0 0 8px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Pages</h3>
+        <a href="index.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Home</a>
+        <a href="services.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Services</a>
+        <a href="guides.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Guides</a>
+        <a href="faq.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">FAQ</a>
+        <a href="about.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">About</a>
+        <a href="contact.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Contact</a>
+        <a href="rdc-assistance-for-tenants.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">For tenants</a>
+      </nav>
+      <nav aria-label="Services" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0 0 8px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Services</h3>
+        <a href="property-management.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Property management</a>
+        <a href="tenancy-management.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Tenancy management</a>
+        <a href="maintenance-and-fit-out.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Maintenance and fit-out</a>
+        <a href="snagging-and-handover.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Snagging and handover</a>
+        <a href="poa-services.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">POA services</a>
+        <a href="property-gifting.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Property gifting</a>
+        <a href="sell-your-property.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">Sell your property</a>
+        <a href="rdc-assistance.html" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">RDC assistance</a>
+      </nav>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0 0 8px; font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #51325C">Contact</h3>
+        <a href="mailto:info@keylee.ae" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">info@keylee.ae</a>
+        <a href="#" style="font-size: 16px; line-height: 26px; color: #161618; text-decoration: none">[+971 4 XXX XXXX]</a>
+        <span style="font-size: 16px; line-height: 26px; color: #161618">Dubai, United Arab Emirates</span>
+      </div>
+    </div>
+    <div style="margin-top: 72px; padding-top: 28px; border-top: 1px solid #A8AFB7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; line-height: 22px; color: #5C5C5D">
+      <span>© 2026 Keylee. All rights reserved.</span>
+      <span>Properties managed properly.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>

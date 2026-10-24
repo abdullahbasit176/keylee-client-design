@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What to check before you accept a new unit · Keylee guide</title>
+
+<style>
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-600.woff') format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('fonts/poppins-500.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+</style>
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#51325C}a:hover{color:#3B2244}
+.k-wrap{max-width:1296px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.k-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.k-foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.k-menu{display:none}
+.k-nav a{color:#FFFFFF;text-decoration:none;font-size:17px;font-weight:500}
+.k-nav a[aria-current]{text-decoration:underline;text-decoration-color:#A8AFB7;text-decoration-thickness:2px;text-underline-offset:8px}
+.k-label{display:block;font-size:13px;line-height:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#51325C}
+.k-meta{display:block;font-size:13px;line-height:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#5C5C5D}
+.k-h2{margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(32px,3.4vw,40px);line-height:1.2;color:#51325C}
+.k-h3{margin:0;font-size:22px;line-height:30px;font-weight:500;color:#51325C}
+.k-p{margin:10px 0 0;font-size:17px;line-height:28px;color:#161618}
+.k-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;background:#51325C;color:#FFFFFF;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none}
+.k-btn-w{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;background:#FFFFFF;color:#51325C;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none}
+.k-tlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:17px;font-weight:500;color:#51325C;text-decoration:none}
+.k-flink{font-size:16px;line-height:26px;color:#161618;text-decoration:none}
+.k-img{border-radius:80px 0 0 0;background:#EEEBEF;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;text-align:center;font-size:14px;line-height:22px;color:#5C5C5D}
+.k-body h2{margin:56px 0 0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:32px;line-height:40px;color:#51325C}
+.k-body p{margin:16px 0 0;font-size:17px;line-height:28px;color:#161618}
+.k-body ul,.k-body ol{margin:16px 0 0;padding-left:24px;font-size:17px;line-height:28px}
+.k-body li{margin-top:10px}
+.k-body li strong{font-weight:500;color:#51325C}
+.k-faq summary{list-style:none;cursor:pointer}
+.k-faq summary::-webkit-details-marker{display:none}
+.k-faq .k-chev{transition:transform .2s ease}
+.k-faq details[open] .k-chev{transform:rotate(45deg)}
+@media (max-width:1024px){
+.k-three{grid-template-columns:repeat(2,minmax(0,1fr))}
+.k-foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+.k-feat{height:auto !important;aspect-ratio:4/3}
+
+.k-wrap{padding:0 16px}
+.k-three,.k-foot{grid-template-columns:1fr}
+.k-links{display:none !important}
+.k-menu{display:inline-flex}
+}
+
+/* Markers, same as the homepage: menu underline (silver, slides in on hover, stays on the current page) and a short silver line under section headings. */
+nav[aria-label="Main"] a{position:relative;text-decoration:none !important}
+nav[aria-label="Main"] a::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:#A8AFB7;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+nav[aria-label="Main"] a:hover::after,nav[aria-label="Main"] a[aria-current]::after{transform:scaleX(1)}
+.k-h2::after,section h2[style*="Playfair"]::after{content:"";display:block;width:40px;height:2px;margin-top:20px;background:#A8AFB7}
+</style>
+
+</head>
+<body>
+
+
+<div style="font-family: 'Poppins', Arial, sans-serif; font-size: 17px; line-height: 28px; color: #161618; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+
+<!-- COMPACT HEADER: articles open on the title, not a full hero -->
+<section style="background: #51325C; color: #FFFFFF">
+  <div class="k-wrap">
+    <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0">
+      <a href="index.html" style="display: block; line-height: 0"><img src="logos/keylee-logo-reverse.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto"></a>
+      <nav aria-label="Main" class="k-links k-nav" style="display: flex; align-items: center; gap: 36px">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="guides.html" aria-current="page">Guides</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="k-menu" aria-label="Open menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; background: transparent; border: 1px solid #A8AFB7; border-radius: 8px; color: #FFFFFF; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+    </header>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article>
+  <div class="k-wrap" style="padding-top: 48px">
+    <nav aria-label="Breadcrumb">
+      <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; line-height: 22px; color: #5C5C5D">
+        <li><a href="index.html" style="color: #5C5C5D; text-decoration: none">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="guides.html" style="color: #5C5C5D; text-decoration: none">Guides</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page" style="color: #161618">What to check before you accept a new unit</li>
+      </ol>
+    </nav>
+
+    <div style="max-width: 880px; padding-top: 48px">
+      <span class="k-label">Snagging and handover</span>
+      <h1 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 56px); line-height: 1.143; color: #51325C">What to check before you accept a new unit</h1>
+      <p style="margin: 20px 0 0; font-size: 14px; line-height: 22px; color: #5C5C5D">By [Author name] · Updated [date] · [X] min read</p>
+    </div>
+
+    <div role="img" aria-label="Photo placeholder" class="k-img k-feat" style="margin-top: 40px; height: 480px">[Featured photo · Hands at work: a snagging checklist on a clipboard in a new apartment]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">2400 × 960 px · WebP</span></div>
+  </div>
+
+  <div class="k-wrap" style="padding-top: 64px; padding-bottom: 112px">
+    <div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start">
+
+      <div class="k-body" style="flex: 999 1 560px; min-width: 0; max-width: 760px">
+        <!-- THE SHORT ANSWER: answer first, for readers and for AI answers -->
+        <div style="background: #F6F5F7; border-radius: 48px 0 0 0; padding: 32px 36px">
+          <span class="k-label">The short answer</span>
+          <p style="margin-top: 12px; font-size: 19px; line-height: 30px">Inspect the unit before you sign the handover documents. List every defect with a photo, send the list to the developer in writing, and check each fix before you accept the keys.</p>
+        </div>
+
+        <h2 id="when">When to inspect</h2>
+        <p>As soon as the developer gives you access, and before you sign anything that confirms you’ve accepted the unit. Defects found after the handover is signed tend to take longer to get fixed.</p>
+
+        <h2 id="what">What to check, room by room</h2>
+        <ul>
+          <li><strong>Walls and ceilings.</strong> Cracks, damp patches, uneven paint.</li>
+          <li><strong>Floors and tiles.</strong> Hollow or cracked tiles, gaps, scratches.</li>
+          <li><strong>Doors and windows.</strong> Alignment, locks, seals and handles.</li>
+          <li><strong>Plumbing.</strong> Water pressure, leaks under sinks, drainage, hot water.</li>
+          <li><strong>Electrics.</strong> Every socket, switch and light.</li>
+          <li><strong>AC.</strong> Cooling in every room, noise, drainage.</li>
+          <li><strong>Kitchen and bathrooms.</strong> Fittings, sealant and cabinets.</li>
+        </ul>
+
+        <div style="margin-top: 32px; background: #51325C; color: #FFFFFF; border-radius: 40px 0 0 0; padding: 28px 32px">
+          <p style="margin: 0; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 22px; line-height: 32px">Take a photo of every snag, with something in the frame for scale. A list without photos is easy to dispute.</p>
+        </div>
+
+        <h2 id="defects">What to do if you find defects</h2>
+        <ol>
+          <li>Write each snag down with its room and a photo.</li>
+          <li>Send the list to the developer in writing, and keep the reply.</li>
+          <li>Agree a date for the fixes.</li>
+          <li>Inspect again before you accept the keys.</li>
+        </ol>
+
+        <h2 id="abroad">If you can’t be there</h2>
+        <p>A power of attorney lets someone inspect and accept the unit on your behalf. See <a href="poa-services.html" style="color: #51325C; font-weight: 500">POA services</a> for how that works.</p>
+
+        <h2 id="faq">Questions</h2>
+        <div class="k-faq" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px">
+          <details open style="background: #F6F5F7; border-radius: 6px; padding: 0 28px">
+            <summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; font-size: 18px; line-height: 26px; font-weight: 500; color: #161618">
+              <h3 style="margin: 0; font: inherit">Can I refuse the handover if there are defects?</h3>
+              <svg class="k-chev" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" style="flex-shrink: 0"><path d="M12 5v14M5 12h14"></path></svg>
+            </summary>
+            <p style="margin: 0; padding: 0 0 22px; color: #5C5C5D">[Answer to confirm before publishing.]</p>
+          </details>
+          <details style="background: #F6F5F7; border-radius: 6px; padding: 0 28px">
+            <summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; font-size: 18px; line-height: 26px; font-weight: 500; color: #161618">
+              <h3 style="margin: 0; font: inherit">How long does a snagging inspection take?</h3>
+              <svg class="k-chev" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#51325C" stroke-width="1.8" stroke-linecap="round" style="flex-shrink: 0"><path d="M12 5v14M5 12h14"></path></svg>
+            </summary>
+            <p style="margin: 0; padding: 0 0 22px; color: #5C5C5D">[Typical time by unit size, from inspections you’ve done.]</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- SIDEBAR: on this page + the related service -->
+      <aside style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <nav aria-label="On this page" style="border-top: 1px solid #A8AFB7; padding-top: 20px">
+          <span class="k-label">On this page</span>
+          <ul style="list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column">
+            <li><a href="#when" class="k-tlink" style="font-weight: 400; font-size: 16px">When to inspect</a></li>
+            <li><a href="#what" class="k-tlink" style="font-weight: 400; font-size: 16px">What to check, room by room</a></li>
+            <li><a href="#defects" class="k-tlink" style="font-weight: 400; font-size: 16px">What to do if you find defects</a></li>
+            <li><a href="#abroad" class="k-tlink" style="font-weight: 400; font-size: 16px">If you can’t be there</a></li>
+            <li><a href="#faq" class="k-tlink" style="font-weight: 400; font-size: 16px">Questions</a></li>
+          </ul>
+        </nav>
+        <div style="background: #F6F5F7; border-radius: 48px 0 0 0; padding: 32px">
+          <span class="k-label">Need it done for you?</span>
+          <h2 class="k-h3" style="margin-top: 12px">Snagging and handover</h2>
+          <p class="k-p">Before you accept the keys from the developer. We inspect, report and follow up until the snags are fixed.</p>
+          <a href="snagging-and-handover.html" class="k-btn" style="margin-top: 20px">See the service</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</article>
+
+<!-- RELATED GUIDES -->
+<section style="background: #F6F5F7; padding: 112px 0">
+  <div class="k-wrap">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+      <div>
+        <span class="k-label">Keep reading</span>
+        <h2 class="k-h2">Related guides</h2>
+      </div>
+      <a href="guides.html" class="k-tlink">All guides <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+    <div class="k-three" style="margin-top: 48px">
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img" style="aspect-ratio: 16 / 10">[Photo · Hands at work: a tap being fixed]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Maintenance · [X] min read</span>
+        <h3 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">What happens when a tenant reports a leak</a></h3>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img" style="aspect-ratio: 16 / 10">[Photo · Hands at work: a contractor on site]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Maintenance · [X] min read</span>
+        <h3 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">How we choose contractors</a></h3>
+      </article>
+      <article style="display: flex; flex-direction: column">
+        <div role="img" aria-label="Photo placeholder" class="k-img" style="aspect-ratio: 16 / 10">[Photo · Real homes, lived in: an empty, clean living room]<br><span style="display: block; margin-top: 6px; font-size: 13px; letter-spacing: 1px; color: #51325C">800 × 500 px · WebP</span></div>
+        <span class="k-meta" style="margin-top: 24px">Market · [X] min read</span>
+        <h3 class="k-h3" style="margin-top: 8px"><a href="#" style="color: #51325C; text-decoration: none">What an empty month really costs</a></h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="background: #51325C; color: #FFFFFF; padding: 96px 0">
+  <div class="k-wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
+    <div style="max-width: 720px">
+      <span class="k-label" style="color: #A8AFB7">Talk to us</span>
+      <h2 class="k-h2" style="color: #FFFFFF">Collecting a unit soon? Tell us the date.</h2>
+    </div>
+    <a href="contact.html" class="k-btn-w">Talk to us</a>
+  </div>
+</section>
+
+<footer style="background: #FFFFFF; padding: 88px 0 40px">
+  <div class="k-wrap">
+    <div class="k-foot">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+        <a href="index.html" style="display: block; line-height: 0"><img src="logos/keylee-logo-colour.svg" alt="Keylee, properties managed properly" style="display: block; width: 264px; height: auto"></a>
+        <p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 28px">Keylee is a Dubai property management company. Properties managed properly.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="#" class="k-tlink" style="min-height: 0">LinkedIn</a><a href="#" class="k-tlink" style="min-height: 0">WhatsApp</a></div>
+      </div>
+      <nav aria-label="Pages" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Pages</h3>
+        <a href="index.html" class="k-flink">Home</a><a href="services.html" class="k-flink">Services</a><a href="guides.html" class="k-flink">Guides</a><a href="faq.html" class="k-flink">FAQ</a><a href="about.html" class="k-flink">About</a><a href="contact.html" class="k-flink">Contact</a><a href="rdc-assistance-for-tenants.html" class="k-flink">For tenants</a>
+      </nav>
+      <nav aria-label="Services" style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Services</h3>
+        <a href="property-management.html" class="k-flink">Property management</a><a href="tenancy-management.html" class="k-flink">Tenancy management</a><a href="maintenance-and-fit-out.html" class="k-flink">Maintenance and fit-out</a><a href="snagging-and-handover.html" class="k-flink">Snagging and handover</a><a href="poa-services.html" class="k-flink">POA services</a><a href="property-gifting.html" class="k-flink">Property gifting</a><a href="sell-your-property.html" class="k-flink">Sell your property</a><a href="rdc-assistance.html" class="k-flink">RDC assistance</a>
+      </nav>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <h3 class="k-label" style="margin: 0 0 8px">Contact</h3>
+        <a href="mailto:info@keylee.ae" class="k-flink">info@keylee.ae</a><a href="#" class="k-flink">[+971 4 XXX XXXX]</a><span class="k-flink">Dubai, United Arab Emirates</span>
+      </div>
+    </div>
+    <div style="margin-top: 72px; padding-top: 28px; border-top: 1px solid #A8AFB7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; line-height: 22px; color: #5C5C5D">
+      <span>© 2026 Keylee. All rights reserved. <a href="privacy-and-terms.html" style="color: #5C5C5D">Privacy and terms</a></span>
+      <span>Properties managed properly.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
